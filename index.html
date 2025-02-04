@@ -4,9 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página de prueba para Duo</title>
+    <script src="https://api.duo.com/frame/hosted/auth.js"></script>
 </head>
 <body>
     <h1>¡Bienvenido a mi página de prueba con Cisco Duo!</h1>
     <p>Esta es una página simple para probar la autenticación de Duo.</p>
+
+    <script>
+        // Configura la autenticación con Duo
+        Duo.init({
+            host: 'api-7d5a4277.duosecurity.com',  // Sustituye con el host que Duo te dio
+            sig_request: 'signature-request',  // Esto se genera desde tu servidor
+            iframe: true
+        });
+    </script>
 </body>
 </html>
